@@ -30,4 +30,4 @@ ENV PYTHONUNBUFFERED=1
 
 EXPOSE 10000
 
-CMD ["gunicorn", "-b", "0.0.0.0:10000", "backend.app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:10000", "backend:app"]
