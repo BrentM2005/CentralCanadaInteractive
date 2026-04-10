@@ -1,0 +1,32 @@
+erDiagram
+    quiz_runs ||--o{ quiz_answers : "contains"
+    poll_runs ||--o{ poll_answers : "contains"
+
+    quiz_runs {
+        INTEGER id PK
+        TEXT name "The name of the user"
+        INTEGER score "Total correct multiple-choice answers"
+        INTEGER total "Total scorable multiple-choice questions"
+    }
+
+    quiz_answers {
+        INTEGER id PK
+        INTEGER run_id FK "References quiz_runs(id)"
+        INTEGER q_index "Index of the question in the frontend array"
+        TEXT answer "The user's selected or typed answer"
+        BOOLEAN is_correct "True if multiple-choice answer was right"
+        BOOLEAN is_written "True if it was an open-ended text response"
+    }
+
+    poll_runs {
+        INTEGER id PK
+        TEXT name "The name of the user"
+    }
+
+    poll_answers {
+        INTEGER id PK
+        INTEGER run_id FK "References poll_runs(id)"
+        INTEGER q_index "Index of the question in the frontend array"
+        TEXT answer "The user's selected or typed answer"
+        BOOLEAN is_written "True if it was an open-ended text response"
+    }
