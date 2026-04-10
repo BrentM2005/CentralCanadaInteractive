@@ -29,4 +29,4 @@ EXPOSE 10000
 
 WORKDIR /app/backend
 
-CMD ["gunicorn", "-b", "0.0.0.0:10000", "backend.app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:10000", "app:app"]
