@@ -6,7 +6,7 @@ export const QUIZ_QUESTIONS: Question[] = [
   { type: 'multiple-choice', question: "What language is spoken in Quebec?", options: ["French", "English", "Spanish", "Portuguese"], answer: "French" },
   { type: 'multiple-choice', question: "The Canadian Niagara Falls boat tour is called?", options: ["Niagara Falls Tour", "Maid of the Mist", "Titanic", "Voyage to the Falls"], answer: "Voyage to the Falls" },
   { type: 'multiple-choice', question: "The Canadian falls in Niagara is called?", options: ["Mark Carney Falls", "Horseshoe Falls", "Fallsview", "Bridal Veil Falls"], answer: "Horseshoe Falls" },
-  { type: 'multiple-choice', question: "Which famous festival is held in Montreal?", options: ["Winterlude", "International Jazz Festival", "Carnaval de Quebec", "Burning Man"], answer: "Montreal International Jazz Festival and Just for Laughs" },
+  { type: 'multiple-choice', question: "Which famous festival is held in Montreal?", options: ["Winterlude", "International Jazz Festival", "Carnaval de Quebec", "Burning Man"], answer: "International Jazz Festival" },
   { type: 'multiple-choice', question: "What can visitors find at Parliament Hill in Ottawa?", options: ["Canada's government buildings", "A shopping mall", "An amusement park"], answer: "Canada's government buildings" },
   { type: 'multiple-choice', question: "Algonquin Provincial Park is one of the most famous parks in which province?", options: ["Quebec", "Manitoba", "Ontario", "New Brunswick"], answer: "Ontario" },
   { type: 'multiple-choice', question: "Which of the following animals can be found in the forests of Algonquin Provincial Park?", options: ["Polar bears", "Moose", "Bison", "Grizzly bears"], answer: "Moose" },
