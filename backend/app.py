@@ -3,7 +3,7 @@ from flask_cors import CORS
 import sqlite3
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 DB_PATH = os.getenv('DB_PATH', 'data.db')
@@ -86,6 +86,14 @@ def get_poll_report():
     rows = c.fetchall()
     conn.close()
     return jsonify([dict(row) for row in rows])
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
